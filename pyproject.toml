@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "offxml_to_gmx"
+version = "0.1.0"
+description = "Convert SMILES (polymers or molecules) to GROMACS parameters using OpenFF"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "rdkit",
+    "openff-toolkit",
+    "openff-nagl",
+    "openff-nagl-models",
+    "openff-interchange",
+    "openff-units",
+    "numpy",
+    "ase",
+    "tblite",
+    "pillow",
+]
+
+[project.scripts]
+offxml_to_gmx = "offxml_to_gmx.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["offxml_to_gmx*"]

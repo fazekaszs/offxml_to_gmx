@@ -1,0 +1,10 @@
+rdkit
+openff-toolkit
+openff-nagl
+openff-nagl-models
+openff-interchange
+openff-units
+numpy
+ase
+tblite
+pillow
